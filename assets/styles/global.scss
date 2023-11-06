@@ -1,0 +1,8 @@
+/* All global styles from SASS files, imported here for export */
+@import "colours";
+
+// Margin and body resets
+* {
+  padding: 0;
+  margin: 0;
+}
