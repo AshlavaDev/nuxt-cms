@@ -14,7 +14,7 @@
 
   header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     min-width: full;
     padding: 1rem 2rem;
