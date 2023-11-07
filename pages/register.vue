@@ -4,5 +4,6 @@
 const email = ref('')
 const password = ref('')
 const confirmPassword = ref('')
-
 </script>
+
+<template></template>
