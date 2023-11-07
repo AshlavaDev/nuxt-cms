@@ -1,6 +1,7 @@
 <template>
   <!-- Contains header and footer and wrap any pages -->
   <div class="page">
+    <NuxtSnackbar />
     <NavTopNav />
     <main>
       <slot />

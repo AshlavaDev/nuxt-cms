@@ -14,7 +14,9 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/google-fonts',
     'nuxt-icon',
-    '@nuxtjs/supabase'
+    '@nuxtjs/supabase',
+    'nuxt-snackbar',
+    'nuxt-primevue'
   ],
   googleFonts: {
     families: {
@@ -22,4 +24,12 @@ export default defineNuxtConfig({
       'Courier Prime': true,
     },
   },
+  snackbar: {
+    bottom: true,
+    right: true,
+    duration: 5000
+  },
+  primevue: {
+    
+  }
 })

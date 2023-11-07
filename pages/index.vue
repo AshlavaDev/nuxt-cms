@@ -22,13 +22,24 @@
 
     h1 {
       font-family: $display;
-      font-size: 5rem;
+      font-size: 2.5rem;
+      text-align: center;
       color: $primary-colour-light;
+
+      @media (min-width: $breakpoint-tablet) {
+        font-size: 3rem;
+      }
+
     }
 
     p {
-      font-size: 2rem;
+      font-size: 1.2rem;
       color: $white;
+      text-align: center;
+
+      @media (min-width: $breakpoint-tablet) {
+        font-size: 1.5rem;        
+      }
     }
 
     div {
@@ -38,9 +49,13 @@
       a {
         padding: 0.5rem;
         text-decoration: none;
-        font-size: 2rem;
+        font-size: 1.2rem;
         border: 1px solid;
         border-color: $primary-colour-light;
+
+        @media (min-width: $breakpoint-tablet) {
+          font-size: 2rem;
+        }
       }
       
       #primary {
