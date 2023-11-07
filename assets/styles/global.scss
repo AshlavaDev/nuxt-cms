@@ -1,6 +1,6 @@
-/* All global styles from SASS files, imported here for export */
-@import "colours";
-@import "fonts";
+// Variables divided for better readability and changeability
+@import 'colours';
+@import 'fonts';
 
 // Margin and body resets
 * {
