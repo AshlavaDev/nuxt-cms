@@ -9,7 +9,7 @@
   </section>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 section {
   display: flex;
   flex-direction: column;

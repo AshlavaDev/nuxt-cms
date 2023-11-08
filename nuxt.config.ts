@@ -14,11 +14,15 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/google-fonts',
     'nuxt-icon',
-
+    '@nuxtjs/supabase',
     'nuxt-snackbar',
     'nuxt-primevue',
-    '@vueform/nuxt',
   ],
+  supabase: {
+    url: process.env.SUPABASE_URL,
+    key: process.env.SUPABASE_KEY,
+    redirect: false,
+  },
   googleFonts: {
     families: {
       'Fira Sans': true,
