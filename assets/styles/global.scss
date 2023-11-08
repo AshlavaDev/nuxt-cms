@@ -2,6 +2,7 @@
 @import 'colours';
 @import 'fonts';
 @import 'breakpoints';
+@import 'buttons';
 
 // Margin and body resets
 * {
@@ -9,8 +10,3 @@
   margin: 0;
 }
 
-// VueForm overrides
-*, :before, :after, :root {
-  --vf-border-color-input: $primary-colour-light;
-  --vf-bg-input: $white;
-}

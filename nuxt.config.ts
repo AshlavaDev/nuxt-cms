@@ -16,7 +16,6 @@ export default defineNuxtConfig({
     'nuxt-icon',
     '@nuxtjs/supabase',
     'nuxt-snackbar',
-    'nuxt-primevue',
   ],
   supabase: {
     url: process.env.SUPABASE_URL,

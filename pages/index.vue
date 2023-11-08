@@ -3,8 +3,8 @@
     <h1>Nuxt Craft Master Solid</h1>
     <p>The Only Nuxt CMS You'll Ever Need</p>
     <div>
-      <NuxtLink to="/register" id="primary">Sign Up</NuxtLink>
-      <NuxtLink to="/" id="secondary">Login</NuxtLink>
+      <NuxtLink to="/register" class="button primary-button">Sign Up</NuxtLink>
+      <NuxtLink to="/" class="button secondary-button">Login</NuxtLink>
     </div>
   </section>
 </template>
@@ -43,39 +43,6 @@ section {
   div {
     display: flex;
     gap: 1rem;
-
-    a {
-      padding: 0.5rem;
-      text-decoration: none;
-      font-size: 1.2rem;
-      border: 1px solid;
-      border-color: $primary-colour-light;
-
-      @media (min-width: $breakpoint-tablet) {
-        font-size: 2rem;
-      }
-    }
-
-    #primary {
-      background-color: $primary-colour-light;
-      color: $primary-colour-dark;
-
-      &:hover {
-        background-color: $primary-colour-dark;
-        color: $primary-colour-light;
-      }
-    }
-
-    #secondary {
-      background-color: $primary-colour-dark;
-      color: $primary-colour-light;
-
-      &:hover {
-        background-color: $white;
-        border-color: $white;
-        color: $primary-colour-dark;
-      }
-    }
   }
 }
 </style>
