@@ -1,0 +1,35 @@
+// Global styles for forms
+
+//Combined input and label style
+.form-element {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: $primary-colour-light;
+  font-size: 1.4rem;
+  width: 100%;
+}
+
+// Regluar text-input styles
+.text-input {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  border-radius: 0.25rem;
+  color: $primary-colour-dark;
+  border: 1px solid $primary-colour-dark;
+  box-shadow: none;
+
+  &:focus {
+    outline: 2px solid $primary-colour-light;
+  }
+
+  &:invalid {
+    outline: 2px solid $primary-colour-danger;
+  }
+}
+
+// For any error messages
+.input-error {
+  font-size: 1.3rem;
+  color: $primary-colour-danger;
+}

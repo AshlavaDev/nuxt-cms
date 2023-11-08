@@ -32,6 +32,5 @@ export default defineNuxtConfig({
     bottom: true,
     right: true,
     duration: 5000,
-  },
-  primevue: {},
+  }
 })

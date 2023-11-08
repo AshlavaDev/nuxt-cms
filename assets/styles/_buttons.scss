@@ -1,14 +1,14 @@
 //Global button styles
 
 .button {
-  padding: 0.5rem;
+  padding: 0.25rem;
   text-decoration: none;
   font-size: 1.2rem;
   border: 1px solid;
   border-color: $primary-colour-light;
 
   @media (min-width: $breakpoint-tablet) {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 
 }
