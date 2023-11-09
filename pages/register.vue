@@ -22,17 +22,17 @@ async function signUp() {
         email: email.value,
         password: password.value,
       })
-      if (error) throw error;
+      if (error) throw error
       successMsg.value = 'Check your email to confirm your account'
       router.push('/verify')
     }
-    } catch (error: unknown) {
-      if (error instanceof Error) {
-    errorMsg.value = error.message;
-  } else {
-    errorMsg.value = 'An unknown error occurred';
-  }
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      errorMsg.value = error.message
+    } else {
+      errorMsg.value = 'An unknown error occurred'
     }
+  }
 }
 
 watch(email, (value) => {
@@ -51,7 +51,7 @@ watch(password, (value) => {
 })
 
 watch(confirmPassword, (value) => {
-  if(value !== password.value) {
+  if (value !== password.value) {
     confirmPasswordError.value = true
   } else {
     confirmPasswordError.value = false
@@ -65,20 +65,47 @@ watch(confirmPassword, (value) => {
     <form @submit.prevent="signUp">
       <span class="form-element">
         <label for="email">Email</label>
-        <input v-model="email" type="email" placeholder="Email" id="email" class="text-input" required
-      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
+        <input
+          v-model="email"
+          type="email"
+          placeholder="Email"
+          id="email"
+          class="text-input"
+          required
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+        />
         <span class="input-error" v-if="emailError">Invalid Email</span>
       </span>
       <span class="form-element">
         <label for="password">Password</label>
-        <p class="password-message">Password must contain at least one uppercase letter, one lowercase letter, one number, and be at least 8 characters long</p>
-        <input v-model="password" type="password" placeholder="Password" id="password" class="text-input" required pattern = "(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"/>
+        <p class="password-message">
+          Password must contain at least one uppercase letter, one lowercase
+          letter, one number, and be at least 8 characters long
+        </p>
+        <input
+          v-model="password"
+          type="password"
+          placeholder="Password"
+          id="password"
+          class="text-input"
+          required
+          pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"
+        />
         <span class="input-error" v-if="passwordError">Invalid Password</span>
       </span>
       <span class="form-element">
         <label for="confirmPassword">Confirm Password</label>
-        <input v-model="confirmPassword" type="password" placeholder="Confirm Password" id="confirmPassword" class="text-input" required />
-        <span class="input-error" v-if="confirmPasswordError">Passwords Do Not Match</span>
+        <input
+          v-model="confirmPassword"
+          type="password"
+          placeholder="Confirm Password"
+          id="confirmPassword"
+          class="text-input"
+          required
+        />
+        <span class="input-error" v-if="confirmPasswordError"
+          >Passwords Do Not Match</span
+        >
       </span>
       <button class="button primary-button" type="submit">Submit</button>
     </form>
@@ -125,7 +152,6 @@ form {
 }
 
 .password-message {
-  font-size: 1.0rem;
+  font-size: 1rem;
 }
-
 </style>
