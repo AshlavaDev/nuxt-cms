@@ -8,6 +8,7 @@
     <nav>
       <NuxtLink to="/">Home</NuxtLink>
       <NuxtLink to="/about">About</NuxtLink>
+      <NuxtLink to="/register">Register</NuxtLink>
     </nav>
   </header>
 </template>

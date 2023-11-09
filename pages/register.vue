@@ -1,6 +1,8 @@
 <script lang="ts" setup>
+//TODO: Add toast messages
 // Page to register new users
 const client = useSupabaseClient()
+const router = useRouter()
 
 const email = ref('')
 const password = ref('')
@@ -10,15 +12,27 @@ const emailError = ref(false)
 const passwordError = ref(false)
 const confirmPasswordError = ref(false)
 
+const errorMsg = ref('')
+const successMsg = ref('')
+
 async function signUp() {
   try {
-    const { data } = await client.auth.signUp({
-      email: email.value,
-      password: password.value,
-    })
-  } catch (error) {
-    
+    if (confirmPasswordError.value !== true) {
+      const { data, error } = await client.auth.signUp({
+        email: email.value,
+        password: password.value,
+      })
+      if (error) throw error;
+      successMsg.value = 'Check your email to confirm your account'
+      router.push('/verify')
+    }
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+    errorMsg.value = error.message;
+  } else {
+    errorMsg.value = 'An unknown error occurred';
   }
+    }
 }
 
 watch(email, (value) => {
@@ -48,7 +62,7 @@ watch(confirmPassword, (value) => {
 <template>
   <section>
     <h1>Register</h1>
-    <form>
+    <form @submit.prevent="signUp">
       <span class="form-element">
         <label for="email">Email</label>
         <input v-model="email" type="email" placeholder="Email" id="email" class="text-input" required
@@ -66,7 +80,7 @@ watch(confirmPassword, (value) => {
         <input v-model="confirmPassword" type="password" placeholder="Confirm Password" id="confirmPassword" class="text-input" required />
         <span class="input-error" v-if="confirmPasswordError">Passwords Do Not Match</span>
       </span>
-      <button class="button primary-button">Submit</button>
+      <button class="button primary-button" type="submit">Submit</button>
     </form>
   </section>
 </template>
