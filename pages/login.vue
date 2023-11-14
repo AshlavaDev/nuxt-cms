@@ -9,14 +9,14 @@
   const errorMsg = ref('')
   const successMsg = ref('')
 
-  async function login() {
+  async function signIn() {
     try {
       const { data, error } = await client.auth.signInWithPassword({
         email: email.value,
         password: password.value,
       })
       if (error) throw error
-      router.push('/')
+      router.push('/dashboard')
     } catch (error: unknown) {
       if (error instanceof Error) {
         errorMsg.value = error.message
@@ -30,7 +30,7 @@
 <template>
   <section>
     <h1>Login</h1>
-    <form @submit.prevent="login">
+    <form @submit.prevent="signIn">
       <span class="form-element">
           <label for="email">Email</label>
           <input
