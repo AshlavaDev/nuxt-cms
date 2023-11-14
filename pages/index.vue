@@ -4,7 +4,7 @@
     <p>The Only Nuxt CMS You'll Ever Need</p>
     <div>
       <NuxtLink to="/register" class="button primary-button">Sign Up</NuxtLink>
-      <NuxtLink to="/" class="button secondary-button">Login</NuxtLink>
+      <NuxtLink to="/login" class="button secondary-button">Login</NuxtLink>
     </div>
   </section>
 </template>

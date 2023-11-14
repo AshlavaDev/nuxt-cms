@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-//TODO: Add toast messages
+//TODO: Add toast messages, make form style global
 // Page to register new users
 const client = useSupabaseClient()
 const router = useRouter()

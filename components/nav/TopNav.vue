@@ -7,14 +7,13 @@
     </span>
     <nav>
       <NuxtLink to="/">Home</NuxtLink>
-      <NuxtLink to="/about">About</NuxtLink>
       <NuxtLink to="/register">Register</NuxtLink>
+      <NuxtLink to="/login">Login</NuxtLink>
     </nav>
   </header>
 </template>
 
 <styles lang="scss">
-@use '@/assets/styles/global.scss' as *;
 
 header {
   display: flex;
