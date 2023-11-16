@@ -14,7 +14,6 @@ async function logout() {
     console.log(error)
   }
 }
-
 </script>
 
 <template>
@@ -33,7 +32,6 @@ async function logout() {
 </template>
 
 <styles lang="scss">
-
 header {
   display: flex;
   justify-content: space-between;
@@ -95,7 +93,7 @@ header {
       margin: 0;
       font: inherit;
       cursor: pointer;
-      color: inherit;      
+      color: inherit;
       outline: inherit;
 
       font-size: 1.2rem;
